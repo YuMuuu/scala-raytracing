@@ -4,8 +4,8 @@ lazy val root = (project in file(".")).
     version := "0.1",
     scalaVersion := "2.13.1",
     scalacOptions := Seq(
-//      "-Ylog-classpath",
-      //            "-target:jvm-1.8",
+      "-Ylog-classpath",
+      "-target:jvm-1.8",
     ),
     libraryDependencies ++= Seq(
       //opengl
@@ -18,10 +18,10 @@ lazy val root = (project in file(".")).
 
       //cats
       "org.typelevel" %% "cats-core" % "2.0.0",
-    ),
+    )
   )
 //https://github.com/LWJGL/lwjgl3/issues/104
-javaOptions += "-XstartOnFirstThread"
-//javaOptions += "-Dorg.lwjgl.util.Debug=true"
+// unuse. add vmoption this
+//javaOptions += "-XstartOnFirstThread"
 
 
